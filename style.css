@@ -1,0 +1,133 @@
+body {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body>div {
+    height: 480px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.main_mv_img_hair {
+    position: relative;
+}
+
+.main_mv_img_hair>div {
+    position: absolute;
+    width: 40px;
+    left: 136px;
+    top: 5px;
+}
+
+.main_mv_img_face>div {
+    position: absolute;
+    width: 40px;
+    left: 136px;
+    top: 5px;
+}
+
+.main_mv_img_eye>div {
+    position: absolute;
+    width: 40px;
+    left: 136px;
+    top: 5px;
+}
+
+.main_mv_img_nose>div {
+    position: absolute;
+    width: 40px;
+    left: 136px;
+    top: 5px;
+}
+
+.main_mv_img_mouth>div {
+    position: absolute;
+    width: 40px;
+    left: 136px;
+    top: 5px;
+}
+
+.main_mv_option {
+    flex-basis: 14.28%;
+}
+
+.main_mv_option img {
+    width: 100%;
+}
+
+.character_mv_options {
+    position: relative;
+}
+
+.character_mv_options>div {
+    width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+}
+
+.character_mv_options_hair {
+    position: relative !important;
+}
+
+.character_mv_option {
+    flex-basis: 14.28%;
+}
+
+.character_mv_option img {
+    width: 100%;
+}
+
+.cloth_mv_tit {
+    text-align: left;
+}
+
+.main_mv_img_cloth {
+    position: relative;
+}
+
+.main_mv_img_cloth>div {
+    position: absolute;
+    width: 70px;
+    left: 136px;
+    top: 49px;
+}
+
+.main_mv_option img {
+    width: 100%;
+}
+
+.cloth_mv_options {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cloth_mv_option {
+    flex-basis: 14.28%;
+}
+
+.cloth_mv_option img {
+    width: 100%;
+}
+
+.cloth_mv textarea {
+    width: 100%;
+    height: 30px;
+}
