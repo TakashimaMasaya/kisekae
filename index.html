@@ -6,213 +6,598 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
 </head>
 
 <body>
 
-    <div id="TopPage">
-        <p>タイトル</p>
-        <button>すたーとだゾ</button>
+    <div id="page_1">
+        <p class="page1-title">タイトル</p>
+        <button id="headTo_2">すたーとだゾ</button>
     </div>
 
-    <div id="Rule">
-        <p>遊びかただゾ</p>
-        <div></div>
-        <button>はじめるゾ</button>
+    <div id="page_2" class="d-none">
+        <p class="page2-title">遊びかただゾ</p>
+        <div class="explanation">
+            <p class="page2-method">やり方</p>
+            <p class="page2-explanation">説明画面</p>
+        </div>
+        <button id="headTo_3">はじめるゾ</button>
     </div>
 
-    <div id="character">
-        <div class="character_header">
+    <div id="page_3" class="d-none">
+        <div id=" character_header">
+            <div class="d-flex justify-around ">
+                <button id="show_back3">TOP</button>
+                <p class="chara1 ">キャラクターをつくるゾ</p>
+                <button id="show_howTofrom_page3">やり方</button>
+            </div>
+            <p>君はおとこのこ？
+            </p>
+            <p>おんなのこ？</p>
+            <img id="boy_img" style="width: 300px;" src="image9.jpeg">
+            <img id="girl_img" style="width: 300px;" src="image8.jpeg" class="d-none">
+
+            <div class="character_mv_gender d-flex justify-around ">
+                <p id="boy">おとこのこ</p>
+                <p id="girl">おんなのこ</p>
+            </div>
+        </div>
+
+
+        <button id="headTo_4">はじめるゾ</button>
+        <div id="howTo_page3" class="d-none ">
+            <span id="show_page3from_howto"><span></span><span></span></span>
+            <div class="setumei-text ">
+                <p>やり方</p>
+                <br>
+                <p>説明画面</p>
+            </div>
+        </div>
+    </div>
+    <div id="back_3" class="d-none">
+        <p class="really-back ">ほんとに戻る？</p>
+        <p class="delet ">制作したデータは<br>消えてしまいます</p>
+        <div class="d-flex reply-buttons ">
+            <button id="headTo_1from_back">はい</button>
+            <button id="headTo_3from_back">いいえ</button>
+        </div>
+    </div>
+
+    <div id="page_4" class="d-none ">
+        <div class="character_header ">
             <div class="d-flex justify-around">
-                <button>TOP</button>
-                <p>キャラクターをつくるゾ</p>
-                <button>やり方</button>
+                <button id="show_back4">TOP</button>
+                <p class="chara1 ">キャラクターをつくるゾ</p>
+                <button id="show_howTofrom_page4">やり方</button>
             </div>
-            <div class="character_mv_gender d-flex justify-around">
-                <p>おとこのこ</p>
-                <p>おんなのこ</p>
-            </div>
-        </div>
-        <div class="main_mv_img">
-            <div class="main_mv_img_hair">
-                <div class="main_mv_option d-none"><img id="main_mv_hair_1" src="HAIR/BOY/HAIR_1.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_2" src="HAIR/BOY/HAIR_2.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_3" src="HAIR/BOY/HAIR_3.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_4" src="HAIR/BOY/HAIR_4.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_5" src="HAIR/BOY/HAIR_5.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_6" src="HAIR/BOY/HAIR_6.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_7" src="HAIR/BOY/HAIR_7.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_8" src="HAIR/BOY/HAIR_8.png"></div>
-                <div class="main_mv_option d-none" style="top: -18px !important;"><img id="main_mv_hair_9" src="HAIR/BOY/HAIR_9.png">
-                </div>
-                <div class="main_mv_option d-none" style="top: -18px !important;"><img id="main_mv_hair_10" src="HAIR/BOY/HAIR_10.png"> </div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_1" src="HAIR/BOY/HAIR_1.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_2" src="HAIR/BOY/HAIR_2.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_3" src="HAIR/BOY/HAIR_3.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_hair_4" src="HAIR/BOY/HAIR_4.png"></div>
-            </div>
-            <div class="main_mv_img_cloth">
-                <div class="main_mv_option d-none"><img id="main_mv_body_1" src="BODY/BOY/BODY_1.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_2" src="BODY/BOY/BODY_2.png"></div>
-                <div class="main_mv_option d-none" style="top: 33px;left: 123px;"><img id="main_mv_body_3" src="BODY/BOY/BODY_3.png">
-                </div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_4" src="BODY/BOY/BODY_4.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_5" src="BODY/BOY/BODY_5.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_1" src="BODY/BOY/BODY_1.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_2" src="BODY/BOY/BODY_2.png"></div>
-                <div class="main_mv_option d-none" style="top: 33px;left: 123px;"><img id="main_mv_body_3" src="BODY/BOY/BODY_3.png">
-                </div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_4" src="BODY/BOY/BODY_4.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_5" src="BODY/BOY/BODY_5.png"> </div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_1" src="BODY/BOY/BODY_1.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_2" src="BODY/BOY/BODY_2.png"></div>
-                <div class="main_mv_option d-none" style="top: 33px;
-                                              left: 123px;"><img id="main_mv_body_3" src="BODY/BOY/BODY_3.png"></div>
-                <div class="main_mv_option d-none"><img id="main_mv_body_4" src="BODY/BOY/BODY_4.png"></div>
-            </div>
-            <img src="image4.png">
-        </div>
-        <div class="character_mv">
-            <div class="character_mv_parts d-flex justify-around">
-                <p id="select1">かみがた</p>
-                <p id="select2">かお</p>
-                <p id="select3">め</p>
-                <p id="select4">はな</p>
-                <p id="select5">くち</p>
-            </div>
-            <div class="character_mv_options">
-                <div id="option1" class="option character_mv_options_hair d-flex">
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_1.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_2.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_3.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_4.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_5.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_6.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_7.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_8.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_9.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_10.png "> </div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_1.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_2.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_3.png "></div>
-                    <div class="character_mv_option "><img src="HAIR/BOY/HAIR_4.png "></div>
-                </div>
-                <!-- need to add flex -->
-                <div id="option2" class="option character_mv_options_face d-flex d-none">
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_1.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_4_丸顔.png "></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_5_角顔.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_7_おにぎり.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_12_ぷっくり.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_13_福耳.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_15_逞しい.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_16_でこぼこ.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_17_ひげ.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_20_シワ.png"> </div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_1.png "></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_4_丸顔.png "></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_5_角顔.png"></div>
-                    <div class="character_mv_option "><img src="FACE/BOY/FACE_7_おにぎり.png"></div>
-                </div>
-                <div id="option3" class="option character_mv_options_eye d-flex d-none">
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_1.png "></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_2.png "></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_6_太眉1.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_7_太眉2.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_8_太眉3.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_10_小さい.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_12_小さい3.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_16.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_19.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_20.png"> </div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_1.png "></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_2.png "></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_6_太眉1.png"></div>
-                    <div class="character_mv_option "><img src="EYE/BOY/EYE_7_太眉2.png"></div>
-                </div>
-                <div id="option4" class="option character_mv_options_nose d-flex d-none">
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_1.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_2.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_3.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_4.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_5.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_6.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_7.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_8.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_9.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_10.png "> </div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_1.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_2.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_3.png "></div>
-                    <div class="character_mv_option "><img src="NOSE/BOY/NOSE_4.png "></div>
-                </div>
-                <div id="option5" class="option character_mv_options_mouth d-flex d-none">
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_1.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_2.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_3.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_4.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_5.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_6.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_7.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_8.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_9.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_10.png "> </div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_1.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_2.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_3.png "></div>
-                    <div class="character_mv_option "><img src="MOUTH/BOY/MOUTH_4.png "></div>
-                </div>
 
-
-            </div>
         </div>
 
-        <button>つぎだゾ</button>
+
+        <div id="main_mv_img_boy" class="main_mv_img ">
+            <div class="main_mv_img_hair ">
+                <div class="main_mv_parts "><img id="main_mv_hair_boy_1" class="d-none " src="HAIR/BOY/HAIR_1.png "></div>
+                <div class="main_mv_parts " style=" left:145px; top: 12px; "><img id="main_mv_hair_boy_2" class="d-none " src="HAIR/BOY/HAIR_2.png "></div>
+                <div class="main_mv_parts " style="width:42px; top:12px; left:142px; "><img id="main_mv_hair_boy_3" class="d-none " src="HAIR/BOY/HAIR_3.png "></div>
+                <div class="main_mv_parts " style="width: 43px; left: 141px; top: 8px; "><img id="main_mv_hair_boy_4" class="d-none " src="HAIR/BOY/HAIR_4.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_boy_5" class="d-none " src="HAIR/BOY/HAIR_5.png "></div>
+                <div class="main_mv_parts " style="top:12px; "><img id="main_mv_hair_boy_6" class="d-none " src="HAIR/BOY/HAIR_6.png "></div>
+                <div class="main_mv_parts " style="width:42px; top:12px; left:145px; "><img id="main_mv_hair_boy_7" class="d-none " src="HAIR/BOY/HAIR_7.png "></div>
+                <div class="main_mv_parts " style="width:43px; top:6px; left:135px; "><img id="main_mv_hair_boy_8" class="d-none " src="HAIR/BOY/HAIR_8.png "></div>
+                <div class="main_mv_parts " style="width:46px; top: -19px !important; "><img id="main_mv_hair_boy_9" class="d-none " src="HAIR/BOY/HAIR_9.png "></div>
+                <div class="main_mv_parts " style="left:144px; top:8px; "><img id="main_mv_hair_boy_10" class="d-none " src="HAIR/BOY/HAIR_10.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_hair_boy_11" class="d-none " src="HAIR/BOY/HAIR_1.png "></div>
+                <div class="main_mv_parts " style=" left:145px; top: 12px; "><img id="main_mv_hair_boy_12" class="d-none " src="HAIR/BOY/HAIR_2.png "></div>
+                <div class="main_mv_parts " style="width:42px; top:12px; left:142px; "><img id="main_mv_hair_boy_13" class="d-none " src="HAIR/BOY/HAIR_3.png "></div>
+                <div class="main_mv_parts " style="width: 43px; left: 141px; top: 8px; "><img id="main_mv_hair_boy_14" class="d-none " src="HAIR/BOY/HAIR_4.png "></div>
+            </div>
+            <div class="main_mv_img_face ">
+                <div class="main_mv_parts " style="top:16px; width:48px; left:137px; "><img id="main_mv_face_boy_1" class="d-none " src="FACE/BOY/FACE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_2" class="d-none " src="FACE/BOY/FACE_4_丸顔.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_3" class="d-none " src="FACE/BOY/FACE_5_角顔.png "></div>
+                <div class="main_mv_parts " style="width:46px; top:16px; "><img id="main_mv_face_boy_4" class="d-none " src="FACE/BOY/FACE_7.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_5" style="bottom: -95px; " class="d-none " src="FACE/BOY/FACE_12.png ">
+                </div>
+                <div class="main_mv_parts " style="width:49px; top:16px; left:138px; "><img id="main_mv_face_boy_6" class="d-none " src="FACE/BOY/FACE_13_福耳.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_7" class="d-none " src="FACE/BOY/FACE_15_逞しい.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_8" class="d-none " src="FACE/BOY/FACE_16.png ">
+                </div>
+                <div class="main_mv_parts " style="top:16px; width:48px; left:137px; "><img id="main_mv_face_boy_9" class="d-none " src="FACE/BOY/FACE_17.png ">
+                </div>
+                <div class="main_mv_parts " style="top:16px; width:48px; left:137px; "><img id="main_mv_face_boy_10" class="d-none " src="FACE/BOY/FACE_20_シワ.png "> </div>
+                <div class="main_mv_parts " style="top:16px; width:48px; left:137px; "><img id="main_mv_face_boy_11" class="d-none " src="FACE/BOY/FACE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_12" class="d-none " src="FACE/BOY/FACE_4_丸顔.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_boy_13" class="d-none " src="FACE/BOY/FACE_5_角顔.png "></div>
+                <div class="main_mv_parts " style="width:46px; top:16px; "><img id="main_mv_face_boy_14" class="d-none " src="FACE/BOY/FACE_7.png ">
+                </div>
+            </div>
+            <div class="main_mv_img_eye ">
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_1" class="d-none " src="EYE/BOY/EYE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_2" class="d-none " src="EYE/BOY/EYE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_3" class="d-none " src="EYE/BOY/EYE_6_太眉1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_4" class="d-none " src="EYE/BOY/EYE_7_太眉2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_5" class="d-none " src="EYE/BOY/EYE_8_太眉3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_6" class="d-none " src="EYE/BOY/EYE_10_小さい.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_7" class="d-none " src="EYE/BOY/EYE_12_小さい3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_8" class="d-none " src="EYE/BOY/EYE_16.png "></div>
+                <div class="main_mv_parts " style="left:146px; "><img id="main_mv_eye_boy_9" class="d-none " src="EYE/BOY/EYE_19.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_10" class="d-none " src="EYE/BOY/EYE_20.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_11" class="d-none " src="EYE/BOY/EYE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_12" class="d-none " src="EYE/BOY/EYE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_13" class="d-none " src="EYE/BOY/EYE_6_太眉1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_boy_14" class="d-none " src="EYE/BOY/EYE_7_太眉2.png "></div>
+            </div>
+            <div class="main_mv_img_nose ">
+                <div class="main_mv_parts " style="width:2px; left:156px; top:30px; "><img id="main_mv_nose_boy_1" class="d-none " src="NOSE/BOY/NOSE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_2" class="d-none " src="NOSE/BOY/NOSE_4.png "></div>
+                <div class="main_mv_parts " style="width:2px; left:157px; top:31px; "><img id="main_mv_nose_boy_3" class="d-none " src="NOSE/BOY/NOSE_5.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_4" class="d-none " src="NOSE/BOY/NOSE_7.png "></div>
+                <div class="main_mv_parts " style="width:3px; "><img id="main_mv_nose_boy_5" class="d-none " src="NOSE/BOY/NOSE_9.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_6" class="d-none " src="NOSE/BOY/NOSE_12.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_7" class="d-none " src="NOSE/BOY/NOSE_13.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_8" class="d-none " src="NOSE/BOY/NOSE_15.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_9" class="d-none " src="NOSE/BOY/NOSE_17.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_10" class="d-none " src="NOSE/BOY/NOSE_19.png "> </div>
+                <div class="main_mv_parts " style="width:2px; left:156px; top:30px; "><img id="main_mv_nose_boy_11" class="d-none " src="NOSE/BOY/NOSE_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_12" class="d-none " src="NOSE/BOY/NOSE_4.png "></div>
+                <div class="main_mv_parts " style="width:2px; left:157px; top:31px; "><img id="main_mv_nose_boy_13" class="d-none " src="NOSE/BOY/NOSE_5.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_boy_14" class="d-none " src="NOSE/BOY/NOSE_7.png "></div>
+            </div>
+            <div class="main_mv_img_mouth ">
+                <div class="main_mv_parts " style="top:39px; "><img id="main_mv_mouth_boy_1" class="d-none " src="MOUTH/BOY/MOUTH_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_2" class="d-none " src="MOUTH/BOY/MOUTH_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_3" class="d-none " src="MOUTH/BOY/MOUTH_5.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_4" class="d-none " src="MOUTH/BOY/MOUTH_6.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_5" class="d-none " src="MOUTH/BOY/MOUTH_8.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_6" class="d-none " src="MOUTH/BOY/MOUTH_10.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_7" class="d-none " src="MOUTH/BOY/MOUTH_14.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_8" class="d-none " src="MOUTH/BOY/MOUTH_16.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_9" class="d-none " src="MOUTH/BOY/MOUTH_19.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_10" class="d-none " src="MOUTH/BOY/MOUTH_20.png "> </div>
+                <div class="main_mv_parts " style="top:39px; "><img id="main_mv_mouth_boy_11" class="d-none " src="MOUTH/BOY/MOUTH_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_12" class="d-none " src="MOUTH/BOY/MOUTH_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_13" class="d-none " src="MOUTH/BOY/MOUTH_5.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_boy_14" class="d-none " src="MOUTH/BOY/MOUTH_6.png "></div>
+            </div>
+            <div class="main_mv_img_cloth ">
+                <div class="main_mv_parts "><img id="main_mv_body_boy_1" class="d-none " src="BODY/BOY/BODY_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_2" class="d-none " src="BODY/BOY/BODY_2.png "></div>
+                <div class="main_mv_parts " style="left: 100px;top: 55px; "><img id="main_mv_body_boy_3" class="d-none " src="BODY/BOY/BODY_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_4" class="d-none " src="BODY/BOY/BODY_4.png "></div>
+                <div class="main_mv_parts " style="top: 70px;left: 112px; "><img id="main_mv_body_boy_5" class="d-none " src="BODY/BOY/BODY_5.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_6" class="d-none " src="BODY/BOY/BODY_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_7" class="d-none " src="BODY/BOY/BODY_2.png "></div>
+                <div class="main_mv_parts " style="left: 100px;top: 55px; "><img id="main_mv_body_boy_8" class="d-none " src="BODY/BOY/BODY_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_9" class="d-none " src="BODY/BOY/BODY_4.png "></div>
+                <div class="main_mv_parts " style="top: 70px;left: 112px; "><img id="main_mv_body_boy_10" class="d-none " src="BODY/BOY/BODY_5.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_11" class="d-none " src="BODY/BOY/BODY_1.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_12" class="d-none " src="BODY/BOY/BODY_2.png "></div>
+                <div class="main_mv_parts " style="left: 100px;top: 55px; "><img id="main_mv_body_boy_13" class="d-none " src="BODY/BOY/BODY_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_boy_14" class="d-none " src="BODY/BOY/BODY_4.png "></div>
+            </div>
+            <div id="message" class="like "></div>
+            <!-- <img src="image9.jpeg " width="175px "> -->
+        </div>
+        <div id="main_mv_img_girl" class="main_mv_img d-none ">
+            <div class="main_mv_img_hair ">
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_1" class="d-none " src="HAIR/GIRL/HAIR_11.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_2" class="d-none " src="HAIR/GIRL/HAIR_12.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_3" class="d-none " src="HAIR/GIRL/HAIR_13.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_4" class="d-none " src="HAIR/GIRL/HAIR_14.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_5" class="d-none " src="HAIR/GIRL/HAIR_15.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_6" class="d-none " src="HAIR/GIRL/HAIR_16.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_7" class="d-none " src="HAIR/GIRL/HAIR_17.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_8" class="d-none " src="HAIR/GIRL/HAIR_18.png "></div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_hair_girl_9" class="d-none " src="HAIR/GIRL/HAIR_19.png ">
+                </div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_hair_girl_10" class="d-none " src="HAIR/GIRL/HAIR_20.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_11" class="d-none " src="HAIR/GIRL/HAIR_11.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_12" class="d-none " src="HAIR/GIRL/HAIR_12.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_13" class="d-none " src="HAIR/GIRL/HAIR_13.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_hair_girl_14" class="d-none " src="HAIR/GIRL/HAIR_14.png "></div>
+            </div>
+            <div class="main_mv_img_face ">
+                <div class="main_mv_parts "><img id="main_mv_face_girl_1" class="d-none " src="FACE/GIRL/FACE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_2" class="d-none " src="FACE/GIRL/FACE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_3" class="d-none " src="FACE/GIRL/FACE_6.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_4" style="bottom: -98px !important; " class="d-none " src="FACE/GIRL/FACE_8.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_5" class="d-none " src="FACE/GIRL/FACE_9_大人顔.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_6" class="d-none " src="FACE/GIRL/FACE_10_小顔.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_7" class="d-none " src="FACE/GIRL/FACE_11.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_8" class="d-none " src="FACE/GIRL/FACE_14_面長.png ">
+                </div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_9" class="d-none " src="FACE/GIRL/FACE_18.png ">
+                </div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_face_girl_10" class="d-none " src="FACE/GIRL/FACE_19_チーク.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_11" class="d-none " src="FACE/GIRL/FACE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_12" class="d-none " src="FACE/GIRL/FACE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_13" class="d-none " src="FACE/GIRL/FACE_6.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_face_girl_14" style="bottom: -98px !important; " class="d-none " src="FACE/GIRL/FACE_8.png ">
+                </div>
+            </div>
+            <div class="main_mv_img_eye ">
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_1" class="d-none " src="EYE/GIRL/EYE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_2" class="d-none " src="EYE/GIRL/EYE_4.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_3" class="d-none " src="EYE/GIRL/EYE_5_困り.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_4" class="d-none " src="EYE/GIRL/EYE_9_涙袋.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_5" class="d-none " src="EYE/GIRL/EYE_11_小さい2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_6" class="d-none " src="EYE/GIRL/EYE_13.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_7" class="d-none " src="EYE/GIRL/EYE_14.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_8" class="d-none " src="EYE/GIRL/EYE_15.png "></div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_eye_girl_9" class="d-none " src="EYE/GIRL/EYE_17.png ">
+                </div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_eye_girl_10" class="d-none " src="EYE/GIRL/EYE_18.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_11" class="d-none " src="EYE/GIRL/EYE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_12" class="d-none " src="EYE/GIRL/EYE_4.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_13" class="d-none " src="EYE/GIRL/EYE_5_困り.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_eye_girl_14" class="d-none " src="EYE/GIRL/EYE_9_涙袋.png "></div>
+            </div>
+            <div class="main_mv_img_nose ">
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_1" class="d-none " src="NOSE/GIRL/NOSE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_2" class="d-none " src="NOSE/GIRL/NOSE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_3" class="d-none " src="NOSE/GIRL/NOSE_6.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_4" class="d-none " src="NOSE/GIRL/NOSE_8.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_5" class="d-none " src="NOSE/GIRL/NOSE_10.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_6" class="d-none " src="NOSE/GIRL/NOSE_11.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_7" class="d-none " src="NOSE/GIRL/NOSE_14.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_8" class="d-none " src="NOSE/GIRL/NOSE_16.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_9" class="d-none " src="NOSE/GIRL/NOSE_18.png ">
+                </div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_nose_girl_10" class="d-none " src="NOSE/GIRL/NOSE_20.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_11" class="d-none " src="NOSE/GIRL/NOSE_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_12" class="d-none " src="NOSE/GIRL/NOSE_3.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_13" class="d-none " src="NOSE/GIRL/NOSE_6.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_nose_girl_14" class="d-none " src="NOSE/GIRL/NOSE_8.png "></div>
+            </div>
+            <div class="main_mv_img_mouth ">
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_1" class="d-none " src="MOUTH/GIRL/MOUTH_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_2" class="d-none " src="MOUTH/GIRL/MOUTH_4.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_3" class="d-none " src="MOUTH/GIRL/MOUTH_7.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_4" class="d-none " src="MOUTH/GIRL/MOUTH_9.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_5" class="d-none " src="MOUTH/GIRL/MOUTH_11.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_6" class="d-none " src="MOUTH/GIRL/MOUTH_12.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_7" class="d-none " src="MOUTH/GIRL/MOUTH_13.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_8" class="d-none " src="MOUTH/GIRL/MOUTH_15.png "></div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_mouth_girl_9" class="d-none " src="MOUTH/GIRL/MOUTH_17.png ">
+                </div>
+                <div class="main_mv_parts " style="top: -18px !important; "><img id="main_mv_mouth_girl_10" class="d-none " src="MOUTH/GIRL/MOUTH_18.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_11" class="d-none " src="MOUTH/GIRL/MOUTH_2.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_12" class="d-none " src="MOUTH/GIRL/MOUTH_4.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_13" class="d-none " src="MOUTH/GIRL/MOUTH_7.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_mouth_girl_14" class="d-none " src="MOUTH/GIRL/MOUTH_9.png "></div>
+            </div>
+            <div class="main_mv_img_cloth ">
+                <div class="main_mv_parts "><img id="main_mv_body_girl_1" class="d-none " src="BODY/GIRL/BODY_6.png "></div>
+                <div class="main_mv_parts " style=" left: 103px;top: 88px; "><img id="main_mv_body_girl_2" class="d-none " src="BODY/GIRL/BODY_7.png "></div>
+                <div class="main_mv_parts " style="top: 85px;left: 113px; "><img id="main_mv_body_girl_3" class="d-none " src="BODY/GIRL/BODY_8.png "></div>
+                <div class="main_mv_parts " style="left: 107px;top: 75px; "><img id="main_mv_body_girl_4" class="d-none " src="BODY/GIRL/BODY_9.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_girl_5" class="d-none " src="BODY/GIRL/BODY_10.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_girl_6" class="d-none " src="BODY/GIRL/BODY_6.png "></div>
+                <div class="main_mv_parts " style=" left: 103px;top: 88px; "><img id="main_mv_body_girl_7" class="d-none " src="BODY/GIRL/BODY_7.png "></div>
+                <div class="main_mv_parts " style="top: 85px;left: 113px; "><img id="main_mv_body_girl_8" class="d-none " src="BODY/GIRL/BODY_8.png "></div>
+                <div class="main_mv_parts " style="left: 107px;top: 75px; "><img id="main_mv_body_girl_9" class="d-none " src="BODY/GIRL/BODY_9.png "></div>
+                <div class="main_mv_parts "><img id="main_mv_body_girl_10" class="d-none " src="BODY/GIRL/BODY_10.png "> </div>
+                <div class="main_mv_parts "><img id="main_mv_body_girl_11" class="d-none " src="BODY/GIRL/BODY_6.png "></div>
+                <div class="main_mv_parts " style=" left: 103px;top: 88px; "><img id="main_mv_body_girl_12" class="d-none " src="BODY/GIRL/BODY_7.png "></div>
+                <div class="main_mv_parts " style="top: 85px;left: 113px; "><img id="main_mv_body_girl_13" class="d-none " src="BODY/GIRL/BODY_8.png "></div>
+                <div class="main_mv_parts " style="left: 107px;top: 75px; "><img id="main_mv_body_girl_14" class="d-none " src="BODY/GIRL/BODY_9.png "></div>
+            </div>
+            <div id="message_girl" class="like "></div>
+        </div>
+        <div class="parts_options ">
+
+            <div id="character_mv_options">
+
+
+                <div id="character_mv_options_boy">
+                    <div class="character_mv_parts d-flex justify-around ">
+                        <p id="select1">かみがた</p>
+                        <p id="select6">服</p>
+                        <p id="select2">かお</p>
+                        <p id="select3">め</p>
+                        <p id="select4">はな</p>
+                        <p id="select5">くち</p>
+                    </div>
+                    <div id="option_boy_1" class="option character_mv_options_hair d-flex ">
+                        <div id="parts_hair_boy_1" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_1.png "></div>
+                        <div id="parts_hair_boy_2" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_2.png "></div>
+                        <div id="parts_hair_boy_3" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_3.png "></div>
+                        <div id="parts_hair_boy_4" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_4.png "></div>
+                        <div id="parts_hair_boy_5" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_5.png "></div>
+                        <div id="parts_hair_boy_6" class="option1 character_mv_option "><img src="HAIR/BOY/HAIR_6.png "></div>
+                        <div id="parts_hair_boy_7" class="option2 character_mv_option "><img src="HAIR/BOY/HAIR_7.png "></div>
+                        <div id="parts_hair_boy_8" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_8.png "></div>
+                        <div id="parts_hair_boy_9" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_9.png "></div>
+                        <div id="parts_hair_boy_10" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_10.png "></div>
+                        <div id="parts_hair_boy_11" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_1.png "></div>
+                        <div id="parts_hair_boy_12" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_2.png "></div>
+                        <div id="parts_hair_boy_13" class="option3 character_mv_option "><img src="HAIR/BOY/HAIR_3.png "></div>
+                        <div id="parts_hair_boy_14" class="character_mv_option "><img src="HAIR/BOY/HAIR_4.png "></div>
+                    </div>
+                    <!-- need to add flex -->
+                    <div id="option_boy_2" class="option character_mv_options_face d-flex d-none ">
+                        <div id="parts_face_boy_1" class="option1 character_mv_option "><img src="FACE/BOY/FACE_1.png "></div>
+                        <div id="parts_face_boy_2" class="option1 character_mv_option "><img src="FACE/BOY/FACE_4_丸顔.png "></div>
+                        <div id="parts_face_boy_3" class="option1 character_mv_option "><img src="FACE/BOY/FACE_5_角顔.png "></div>
+                        <div id="parts_face_boy_4" class="option1 character_mv_option "><img src="FACE/BOY/FACE_7.png "></div>
+                        <div id="parts_face_boy_5" class="option1 character_mv_option "><img src="FACE/BOY/FACE_12.png "></div>
+                        <div id="parts_face_boy_6" class="option1 character_mv_option "><img src="FACE/BOY/FACE_13_福耳.png "></div>
+                        <div id="parts_face_boy_7" class="option2 character_mv_option "><img src="FACE/BOY/FACE_15_逞しい.png "></div>
+                        <div id="parts_face_boy_8" class="option3 character_mv_option "><img src="FACE/BOY/FACE_16.png "></div>
+                        <div id="parts_face_boy_9" class="option3 character_mv_option "><img src="FACE/BOY/FACE_17.png "></div>
+                        <div id="parts_face_boy_10" class="option3 character_mv_option "><img src="FACE/BOY/FACE_20_シワ.png "> </div>
+                        <div id="parts_face_boy_11" class="option3 character_mv_option "><img src="FACE/BOY/FACE_1.png "></div>
+                        <div id="parts_face_boy_12" class="option3 character_mv_option "><img src="FACE/BOY/FACE_4_丸顔.png "></div>
+                        <div id="parts_face_boy_13" class="option3 character_mv_option "><img src="FACE/BOY/FACE_5_角顔.png "></div>
+                        <div id="parts_face_boy_14" class="character_mv_option "><img src="FACE/BOY/FACE_7.png "></div>
+                    </div>
+                    <div id="option_boy_3" class="option character_mv_options_eye d-flex d-none ">
+                        <div id="parts_eye_boy_1" class="option1 character_mv_option "><img src="EYE/BOY/EYE_1.png "></div>
+                        <div id="parts_eye_boy_2" class="option1 character_mv_option "><img src="EYE/BOY/EYE_2.png "></div>
+                        <div id="parts_eye_boy_3" class="option1 character_mv_option "><img src="EYE/BOY/EYE_6_太眉1.png "></div>
+                        <div id="parts_eye_boy_4" class="option1 character_mv_option "><img src="EYE/BOY/EYE_7_太眉2.png "></div>
+                        <div id="parts_eye_boy_5" class="option1 character_mv_option "><img src="EYE/BOY/EYE_8_太眉3.png "></div>
+                        <div id="parts_eye_boy_6" class="option1 character_mv_option "><img src="EYE/BOY/EYE_10_小さい.png "></div>
+                        <div id="parts_eye_boy_7" class="option2 character_mv_option "><img src="EYE/BOY/EYE_12_小さい3.png "></div>
+                        <div id="parts_eye_boy_8" class="option3 character_mv_option "><img src="EYE/BOY/EYE_16.png "></div>
+                        <div id="parts_eye_boy_9" class="option3 character_mv_option "><img src="EYE/BOY/EYE_19.png "></div>
+                        <div id="parts_eye_boy_10" class="option3 character_mv_option "><img src="EYE/BOY/EYE_20.png "> </div>
+                        <div id="parts_eye_boy_11" class="option3 character_mv_option "><img src="EYE/BOY/EYE_1.png "></div>
+                        <div id="parts_eye_boy_12" class="option3 character_mv_option "><img src="EYE/BOY/EYE_2.png "></div>
+                        <div id="parts_eye_boy_13" class="option3 character_mv_option "><img src="EYE/BOY/EYE_6_太眉1.png "></div>
+                        <div id="parts_eye_boy_14" class="character_mv_option "><img src="EYE/BOY/EYE_7_太眉2.png "></div>
+                    </div>
+                    <div id="option_boy_4" class="option character_mv_options_nose d-flex d-none ">
+                        <div id="parts_nose_boy_1" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_1.png "></div>
+                        <div id="parts_nose_boy_2" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_4.png "></div>
+                        <div id="parts_nose_boy_3" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_5.png "></div>
+                        <div id="parts_nose_boy_4" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_7.png "></div>
+                        <div id="parts_nose_boy_5" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_9.png "></div>
+                        <div id="parts_nose_boy_6" class="option1 character_mv_option "><img src="NOSE/BOY/NOSE_12.png "></div>
+                        <div id="parts_nose_boy_7" class="option2 character_mv_option "><img src="NOSE/BOY/NOSE_13.png "></div>
+                        <div id="parts_nose_boy_8" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_15.png "></div>
+                        <div id="parts_nose_boy_9" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_17.png "></div>
+                        <div id="parts_nose_boy_10" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_19.png "> </div>
+                        <div id="parts_nose_boy_11" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_1.png "></div>
+                        <div id="parts_nose_boy_12" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_4.png "></div>
+                        <div id="parts_nose_boy_13" class="option3 character_mv_option "><img src="NOSE/BOY/NOSE_5.png "></div>
+                        <div id="parts_nose_boy_14" class="character_mv_option "><img src="NOSE/BOY/NOSE_7.png "></div>
+                    </div>
+                    <div id="option_boy_5" class="option character_mv_options_mouth d-flex d-none ">
+                        <div id="parts_mouth_boy_1" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_1.png "></div>
+                        <div id="parts_mouth_boy_2" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_3.png "></div>
+                        <div id="parts_mouth_boy_3" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_5.png "></div>
+                        <div id="parts_mouth_boy_4" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_6.png "></div>
+                        <div id="parts_mouth_boy_5" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_8.png "></div>
+                        <div id="parts_mouth_boy_6" class="option1 character_mv_option "><img src="MOUTH/BOY/MOUTH_10.png "></div>
+                        <div id="parts_mouth_boy_7" class="option2 character_mv_option "><img src="MOUTH/BOY/MOUTH_14.png "></div>
+                        <div id="parts_mouth_boy_8" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_16.png "></div>
+                        <div id="parts_mouth_boy_9" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_19.png "></div>
+                        <div id="parts_mouth_boy_10" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_20.png "> </div>
+                        <div id="parts_mouth_boy_11" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_1.png "></div>
+                        <div id="parts_mouth_boy_12" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_3.png "></div>
+                        <div id="parts_mouth_boy_13" class="option3 character_mv_option "><img src="MOUTH/BOY/MOUTH_5.png "></div>
+                        <div id="parts_mouth_boy_14" class="character_mv_option "><img src="MOUTH/BOY/MOUTH_6.png "></div>
+                    </div>
+                    <div id="option_boy_6" class="cloth_mv_options d-flex d-none">
+                        <div id="parts_body_boy_1" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_1.png "></div>
+                        <div id="parts_body_boy_2" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_2.png "></div>
+                        <div id="parts_body_boy_3" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_3.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_4" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_4.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_5" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_5.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_6" class="cloth_mv_option option1 "><img src="BODY/BOY/BODY_1.png "></div>
+                        <div id="parts_body_boy_7" class="cloth_mv_option option2 "><img src="BODY/BOY/BODY_2.png "></div>
+                        <div id="parts_body_boy_8" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_3.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_9" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_4.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_10" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_5.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_11" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_1.png "></div>
+                        <div id="parts_body_boy_12" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_2.png "></div>
+                        <div id="parts_body_boy_13" class="cloth_mv_option option3 "><img src="BODY/BOY/BODY_3.png " style="height:41px ">
+                        </div>
+                        <div id="parts_body_boy_14" class="cloth_mv_option "><img src="BODY/BOY/BODY_4.png " style="height:41px "></div>
+                    </div>
+                </div>
+                <div id="character_mv_options_girl" class="character_mv_options d-none ">
+
+                    <div id="faceParts_girl">
+                        <div id="faceParts_select_girl" class="character_mv_parts d-flex justify-around ">
+                            <p id="select1_girl">かみがた</p>
+                            <p id="select2_girl">かお</p>
+                            <p id="select3_girl">め</p>
+                            <p id="select4_girl">はな</p>
+                            <p id="select5_girl">くち</p>
+                            <p id="select6_girl">服</p>
+                        </div>
+                        <div id="option_girl_1" class="option character_mv_options_hair d-flex ">
+                            <div id="parts_hair_girl_1" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_11.png "></div>
+                            <div id="parts_hair_girl_2" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_12.png "></div>
+                            <div id="parts_hair_girl_3" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_13.png "></div>
+                            <div id="parts_hair_girl_4" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_14.png "></div>
+                            <div id="parts_hair_girl_5" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_15.png "></div>
+                            <div id="parts_hair_girl_6" class="option1 character_mv_option "><img src="HAIR/GIRL/HAIR_16.png "></div>
+                            <div id="parts_hair_girl_7" class="option2 character_mv_option "><img src="HAIR/GIRL/HAIR_17.png "></div>
+                            <div id="parts_hair_girl_8" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_18.png "></div>
+                            <div id="parts_hair_girl_9" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_19.png "></div>
+                            <div id="parts_hair_girl_10" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_20.png "></div>
+                            <div id="parts_hair_girl_11" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_11.png "></div>
+                            <div id="parts_hair_girl_12" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_12.png "></div>
+                            <div id="parts_hair_girl_13" class="option3 character_mv_option "><img src="HAIR/GIRL/HAIR_13.png "></div>
+                            <div id="parts_hair_girl_14" class="character_mv_option "><img src="HAIR/GIRL/HAIR_14.png "></div>
+                        </div>
+                        <!-- need to add flex -->
+                        <div id="option_girl_2" class="option character_mv_options_face d-flex d-none ">
+                            <div id="parts_face_girl_1" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_2.png "></div>
+                            <div id="parts_face_girl_2" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_3.png "></div>
+                            <div id="parts_face_girl_3" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_6.png "></div>
+                            <div id="parts_face_girl_4" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_8.png "></div>
+                            <div id="parts_face_girl_5" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_9_大人顔.png ">
+                            </div>
+                            <div id="parts_face_girl_6" class="option1 character_mv_option "><img src="FACE/GIRL/FACE_10_小顔.png ">
+                            </div>
+                            <div id="parts_face_girl_7" class="option2 character_mv_option "><img src="FACE/GIRL/FACE_11.png "></div>
+                            <div id="parts_face_girl_8" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_14_面長.png ">
+                            </div>
+                            <div id="parts_face_girl_9" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_18.png "></div>
+                            <div id="parts_face_girl_10" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_19_チーク.png ">
+                            </div>
+                            <div id="parts_face_girl_11" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_2.png "></div>
+                            <div id="parts_face_girl_12" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_3.png "></div>
+                            <div id="parts_face_girl_13" class="option3 character_mv_option "><img src="FACE/GIRL/FACE_6.png "></div>
+                            <div id="parts_face_girl_14" class="character_mv_option "><img src="FACE/GIRL/FACE_8.png "></div>
+                        </div>
+                        <div id="option_girl_3" class="option character_mv_options_eye d-flex d-none ">
+                            <div id="parts_eye_girl_1" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_3.png "></div>
+                            <div id="parts_eye_girl_2" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_4.png "></div>
+                            <div id="parts_eye_girl_3" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_5_困り.png "></div>
+                            <div id="parts_eye_girl_4" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_9_涙袋.png "></div>
+                            <div id="parts_eye_girl_5" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_11_小さい2.png "></div>
+                            <div id="parts_eye_girl_6" class="option1 character_mv_option "><img src="EYE/GIRL/EYE_13.png "></div>
+                            <div id="parts_eye_girl_7" class="option2 character_mv_option "><img src="EYE/GIRL/EYE_14.png "></div>
+                            <div id="parts_eye_girl_8" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_15.png "></div>
+                            <div id="parts_eye_girl_9" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_17.png "></div>
+                            <div id="parts_eye_girl_10" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_18.png "> </div>
+                            <div id="parts_eye_girl_11" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_3.png "></div>
+                            <div id="parts_eye_girl_12" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_4.png "></div>
+                            <div id="parts_eye_girl_13" class="option3 character_mv_option "><img src="EYE/GIRL/EYE_5_困り.png "></div>
+                            <div id="parts_eye_girl_14" class="character_mv_option "><img src="EYE/GIRL/EYE_9_涙袋.png "></div>
+                        </div>
+                        <div id="option_girl_4" class="option character_mv_options_nose d-flex d-none ">
+                            <div id="parts_nose_girl_1" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_2.png "></div>
+                            <div id="parts_nose_girl_2" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_3.png "></div>
+                            <div id="parts_nose_girl_3" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_6.png "></div>
+                            <div id="parts_nose_girl_4" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_8.png "></div>
+                            <div id="parts_nose_girl_5" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_10.png "></div>
+                            <div id="parts_nose_girl_6" class="option1 character_mv_option "><img src="NOSE/GIRL/NOSE_11.png "></div>
+                            <div id="parts_nose_girl_7" class="option2 character_mv_option "><img src="NOSE/GIRL/NOSE_14.png "></div>
+                            <div id="parts_nose_girl_8" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_16.png "></div>
+                            <div id="parts_nose_girl_9" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_18.png "></div>
+                            <div id="parts_nose_girl_10" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_20.png "> </div>
+                            <div id="parts_nose_girl_11" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_2.png "></div>
+                            <div id="parts_nose_girl_12" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_3.png "></div>
+                            <div id="parts_nose_girl_13" class="option3 character_mv_option "><img src="NOSE/GIRL/NOSE_6.png "></div>
+                            <div id="parts_nose_girl_14" class="character_mv_option "><img src="NOSE/GIRL/NOSE_8.png "></div>
+                        </div>
+                        <div id="option_girl_5" class="option character_mv_options_mouth d-flex d-none ">
+                            <div id="parts_mouth_girl_1" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_2.png "></div>
+                            <div id="parts_mouth_girl_2" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_4.png "></div>
+                            <div id="parts_mouth_girl_3" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_7.png "></div>
+                            <div id="parts_mouth_girl_4" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_9.png "></div>
+                            <div id="parts_mouth_girl_5" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_11.png ">
+                            </div>
+                            <div id="parts_mouth_girl_6" class="option1 character_mv_option "><img src="MOUTH/GIRL/MOUTH_12.png ">
+                            </div>
+                            <div id="parts_mouth_girl_7" class="option2 character_mv_option "><img src="MOUTH/GIRL/MOUTH_13.png ">
+                            </div>
+                            <div id="parts_mouth_girl_8" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_15.png ">
+                            </div>
+                            <div id="parts_mouth_girl_9" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_17.png ">
+                            </div>
+                            <div id="parts_mouth_girl_10" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_18.png ">
+                            </div>
+                            <div id="parts_mouth_girl_11" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_2.png ">
+                            </div>
+                            <div id="parts_mouth_girl_12" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_4.png ">
+                            </div>
+                            <div id="parts_mouth_girl_13" class="option3 character_mv_option "><img src="MOUTH/GIRL/MOUTH_7.png ">
+                            </div>
+                            <div id="parts_mouth_girl_14" class="character_mv_option "><img src="MOUTH/GIRL/MOUTH_9.png "></div>
+                        </div>
+                        <div id="option_girl_6" class="cloth_mv_options d-flex d-none ">
+                            <div id="parts_body_girl_1" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_6.png "></div>
+                            <div id="parts_body_girl_2" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_7.png "></div>
+                            <div id="parts_body_girl_3" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_8.png "></div>
+                            <div id="parts_body_girl_4" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_9.png "></div>
+                            <div id="parts_body_girl_5" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_10.png "></div>
+                            <div id="parts_body_girl_6" class="cloth_mv_option option1 "><img src="BODY/GIRL/BODY_6.png "></div>
+                            <div id="parts_body_girl_7" class="cloth_mv_option option2 "><img src="BODY/GIRL/BODY_7.png "></div>
+                            <div id="parts_body_girl_8" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_8.png "></div>
+                            <div id="parts_body_girl_9" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_9.png "></div>
+                            <div id="parts_body_girl_10" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_10.png "> </div>
+                            <div id="parts_body_girl_11" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_6.png "></div>
+                            <div id="parts_body_girl_12" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_7.png "></div>
+                            <div id="parts_body_girl_13" class="cloth_mv_option option3 "><img src="BODY/GIRL/BODY_8.png "></div>
+                            <div id="parts_body_girl_14" class="cloth_mv_option "><img src="BODY/GIRL/BODY_9.png "></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="show_name">つぎだゾ</button>
+            <div id="name" class="d-none">
+                <div class="name_mv_tit ">
+                    <p class="message ">メッセージをかくゾ</p>
+                </div>
+                <textarea id="textarea" class="area "></textarea>
+            </div>
+        </div>
+        <div id="name_btn" class="d-none">
+            <button id="back_check">戻る</button>
+            <button id="show_check">つぎだゾ</button>
+        </div>
+        <div id="check" class="d-none">
+            <p class="ok ">これでよいですか？</p>
+            <div class="d-flex finish-button ">
+                <button id="headTo_end">はい</button>
+                <button id="headTo_3from_check">いいえ</button>
+            </div>
+        </div>
+        <div id="end" class="d-none"> <button id="show_backlast">おわるゾ</button></div>
+
+        <div id="howTo_page4" class="d-none ">
+            <span id="show_page4from_howto"><span></span><span></span></span>
+            <div class="setumei-text ">
+                <p>やり方</p>
+                <br>
+                <p>説明画面</p>
+            </div>
+        </div>
+
+
     </div>
 
 
-    <div id="cloth ">
-        <div class="cloth_header d-flex justify-around ">
-            <button>TOP</button>
-            <p>キャラクターをつくるゾ</p>
-            <button>やり方</button>
+    <div id="back_4" class="d-none">
+        <p class="really-back ">ほんとに戻る？</p>
+        <p class="delet ">制作したデータは<br>消えてしまいます</p>
+        <div class="d-flex reply-buttons ">
+            <button id="headTo_1from4">はい</button>
+            <button id="headTo_4from_4">いいえ</button>
         </div>
-
-        <div class="main_mv_img ">
-
-            <img src="image4.png ">
-        </div>
-        <div class="cloth_mv ">
-            <div class="cloth_mv_tit ">
-                <p>服をえらぶゾ</p>
-            </div>
-            <div class="cloth_mv_options d-flex ">
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_1.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_2.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_3.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_4.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_5.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_1.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_2.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_3.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_4.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_5.png "> </div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_1.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_2.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_3.png "></div>
-                <div class="cloth_mv_option "><img src="BODY/BOY/BODY_4.png "></div>
-            </div>
-            <div class="cloth_mv_tit ">
-                <p>メッセージをかくゾ</p>
-            </div>
-            <textarea></textarea>
-        </div>
-        <button>つぎだゾ</button>
     </div>
+
+    <div id="back_last" class="d-none">
+        <p class="really-back ">ほんとに終わる？</p>
+        <p class="delet ">制作したデータは<br>消えてしまいます</p>
+        <div class="d-flex reply-buttons ">
+            <button id="headTo_1">はい</button>
+            <button id="headTo_4from_last">いいえ</button>
+        </div>
+    </div>
+    <div id="img-qr"></div>
+
 
 </body>
-<script type="text/javascript" src="script.js "></script>
+<script type="text/javascript " src="script.js "></script>
 
 
 </html>

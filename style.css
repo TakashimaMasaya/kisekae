@@ -1,12 +1,17 @@
 body {
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    height: 100%;
+    max-width: 400px;
+    max-height: 812px;
     text-align: center;
+    margin: 0 auto;
 }
 
 body>div {
-    height: 480px;
+    width: calc(100% - 50px);
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 25px 0;
 }
 
 .d-flex {
@@ -18,82 +23,984 @@ body>div {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
+    /* width: 93px;
+    position: absolute;
+    right: -25px;
+    bottom: -65px; */
+}
+
+.bg_gray::before {
+    content: "";
+    background-color: gray;
+    opacity: 0.9;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 }
 
 .justify-around {
     justify-content: space-around;
 }
 
-.main_mv_img_hair {
+.backColor_gray {
+    background-color: gray;
+}
+
+#back_3 {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+#back_4 {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+#back_last {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+.page_5_content {
+    border: 3px solid black;
+    height: 300px;
+    margin-top: 100px;
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    padding: 0 20px;
+}
+
+#page_6 {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    height: 450px;
+    width: 350px;
+    margin-top: 50px !important;
+    padding: 0;
+    z-index: 1000;
+}
+
+.really-back {
+    font-size: 35px;
+    margin: 71px auto 34px auto;
+}
+
+.delet {
+    font-size: 20px;
+    margin: 0 auto 30px auto;
+}
+
+.reply-buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check-top {
+    border-bottom: 2px solid black;
+}
+
+.like {
+    font-size: 35px;
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 60px 0 20px 0 !important;
+}
+
+.ok {
+    font-size: 25px;
+}
+
+.finish-button {
+    margin: 10px 0px 10px 30px
+}
+
+#howTo_page3 {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 350px;
+    width: 250px;
+    z-index: 2000;
+}
+
+#howTo_page3 div {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#howTo_page3 button {
+    position: absolute;
+    right: 0;
+}
+
+#howTo_page4 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 350px;
+    width: 250px;
+    z-index: 1000;
+}
+
+#howTo_page4 div {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#howTo_page4 button {
+    float: right;
+}
+
+#show_page4from_howto {
+    width: 50px;
+    display: block;
+    height: 40px;
+    float: right;
+}
+
+#show_page4from_howto span {
+    height: 3px;
+    width: 40px;
+    background-color: black;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+
+#show_page4from_howto span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+#show_page4from_howto span:nth-child(2) {
+    transform: rotate(-135deg);
+}
+
+#headTo_1,
+#headTo_4from_check {
+    border: none;
+    background: black;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    height: 33px;
+}
+
+#headTo_7,
+#headTo_3from_check {
+    border: none;
+    background: black;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    width: 94px;
+    height: 33px;
+    margin-right: 20px
+}
+
+
+/* 最初のぺージ */
+
+.page1-title {
+    margin-top: 100px
+}
+
+.page1-title,
+.page2-title {
+    font-size: 30px;
+}
+
+
+/* 2ページ目 */
+
+#headTo_2 {
+    border: none;
+    padding: 5px 6px 3px 6px;
+    background: black;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 300px;
+}
+
+#headTo_3,
+#headTo_4,
+#headTo_5from_end {
+    border: none;
+    padding: 7px 25px 0 25px;
+    background: black;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+.topback {
+    display: flex;
+    flex-direction: column;
+}
+
+.chara {
+    padding-top: 10px;
+}
+
+#headTo_3from_cloth,
+#headTo_5from_cloth,
+#headTo_5from_last {
+    border: none;
+    padding: 0 11px;
+    background: black;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+#show_howTofrom_page4,
+#show_howTofrom_page7 {
+    border: none;
+    background: black;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+}
+
+.explanation {
+    background: black;
+    height: 230px;
+    margin: 14px 0;
+    padding-top: 140px;
+}
+
+.page2-method {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.page2-explanation {
+    font-size: 43px;
+    color: white;
+}
+
+
+/* 3ページ目 */
+
+#headTo_5,
+#show_howTofrom_page3 {
+    border: none;
+    padding: 0 11px;
+    background: black;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+}
+
+#boy {
+    margin-right: 80px;
+}
+
+#boy,
+#girl {
+    border: none;
+    background: black;
+    font-size: 17px;
+    color: white;
+    border-radius: 5px;
+    padding: 9px 16px;
+    margin-top: 40px;
+}
+
+#select1,
+#select2,
+#select3,
+#select4,
+#select5 {
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 8px 10px 2px 10px;
+    margin: 10px 0 10px 0;
+}
+
+#select1_girl,
+#select2_girl,
+#select3_girl,
+#select4_girl,
+#select5_girl {
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 8px 10px 2px 10px;
+    margin: 10px 0 10px 0;
+}
+
+#show_page3from_howto {
+    width: 50px;
+    display: block;
+    height: 40px;
+    float: right;
+}
+
+#show_page3from_howto span {
+    height: 3px;
+    width: 40px;
+    background-color: black;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+
+#show_page3from_howto span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+#show_page3from_howto span:nth-child(2) {
+    transform: rotate(-135deg);
+}
+
+.setumei-text {
+    font-size: 30px;
+}
+
+
+/* キャラクターのイメージ */
+
+.main_mv_parts {
+    flex-basis: 14.28%;
+}
+
+#main_mv_img_boy,
+.main_mv_img {
+    border: 2px solid black;
+    margin-top: 31px;
+    padding: 10px 0px 30px 0;
+    height: 220px;
+}
+
+#main_mv_hair_boy_1,
+#main_mv_hair_boy_11,
+#main_mv_hair_boy_6 {
+    width: 93px;
+    position: absolute;
+    right: -23px;
+    bottom: -65px;
+}
+
+#main_mv_hair_girl_1,
+#main_mv_hair_girl_11 {
+    width: 124px;
+    position: absolute;
+    right: -48px;
+    bottom: -79px;
+}
+
+#main_mv_hair_girl_2,
+#main_mv_hair_girl_12 {
+    width: 128px;
+    position: absolute;
+    right: -53px;
+    bottom: -61px;
+}
+
+#main_mv_hair_girl_3,
+#main_mv_hair_girl_13 {
+    width: 105px;
+    position: absolute;
+    right: -22px;
+    bottom: -60px;
+}
+
+#main_mv_hair_boy_4,
+#main_mv_hair_boy_14 {
+    width: 67px;
+    position: absolute;
+    right: -23px;
+    bottom: -65px;
+}
+
+#main_mv_hair_girl_4,
+#main_mv_hair_girl_14 {
+    width: 126px;
+    position: absolute;
+    right: -48px;
+    bottom: -76px;
+}
+
+#main_mv_hair_boy_5 {
+    width: 80px;
+    position: absolute;
+    right: -26px;
+    bottom: -63px;
+}
+
+#main_mv_hair_girl_5 {
+    width: 103px;
+    position: absolute;
+    right: -39px;
+    bottom: -73px;
+}
+
+#main_mv_hair_girl_6 {
+    width: 101px;
+    position: absolute;
+    right: -32px;
+    bottom: -88px;
+}
+
+#main_mv_hair_girl_7 {
+    width: 146px;
+    position: absolute;
+    right: -54px;
+    bottom: -76px;
+}
+
+#main_mv_hair_boy_7 {
+    width: 81px;
+    position: absolute;
+    right: -26px;
+    bottom: -61px;
+}
+
+#main_mv_hair_boy_8 {
+    width: 46px;
+    position: absolute;
+    right: -8px;
+    bottom: -41px;
+}
+
+#main_mv_hair_girl_8 {
+    width: 101px;
+    position: absolute;
+    right: -33px;
+    bottom: -87px;
+}
+
+#main_mv_hair_boy_9 {
+    width: 37px;
+    position: absolute;
+    right: 5px;
+    bottom: -65px;
+}
+
+#main_mv_hair_girl_9 {
+    width: 100px;
+    position: absolute;
+    right: -26px;
+    bottom: -108px;
+}
+
+#main_mv_hair_boy_10 {
+    width: 85px;
+    position: absolute;
+    right: -24px;
+    bottom: -67px;
+}
+
+#main_mv_hair_girl_10 {
+    width: 91px;
+    position: absolute;
+    right: -24px;
+    bottom: -98px;
+}
+
+#main_mv_hair_boy_2,
+#main_mv_hair_boy_3,
+#main_mv_hair_boy_12,
+#main_mv_hair_boy_13 {
+    width: 81px;
+    position: absolute;
+    right: -23px;
+    bottom: -65px;
+}
+
+#main_mv_face_boy_1,
+#main_mv_face_boy_4,
+#main_mv_face_boy_5,
+#main_mv_face_boy_6,
+#main_mv_face_boy_8,
+#main_mv_face_boy_9,
+#main_mv_face_boy_10,
+#main_mv_face_boy_11,
+#main_mv_face_boy_14 {
+    width: 93px;
+    position: absolute;
+    right: -22px;
+    bottom: -80px;
+}
+
+#main_mv_face_girl_1,
+#main_mv_face_girl_4,
+#main_mv_face_girl_6,
+#main_mv_face_girl_9,
+#main_mv_face_girl_11,
+#main_mv_face_girl_14 {
+    width: 93px;
+    position: absolute;
+    right: -22px;
+    bottom: -82px;
+}
+
+#main_mv_face_girl_5 {
+    width: 85px;
+    position: absolute;
+    right: -22px;
+    bottom: -87px;
+}
+
+#main_mv_face_girl_6 {
+    width: 85px;
+    position: absolute;
+    right: -22px;
+    bottom: -83px;
+}
+
+#main_mv_face_girl_8 {
+    width: 88px;
+    position: absolute;
+    right: -22px;
+    bottom: -92px;
+}
+
+#main_mv_face_girl_10 {
+    width: 93px;
+    position: absolute;
+    right: -22px;
+    bottom: -114px;
+}
+
+#main_mv_face_boy_2,
+#main_mv_face_boy_3,
+#main_mv_face_boy_7,
+#main_mv_face_girl_2,
+#main_mv_face_girl_3,
+#main_mv_face_girl_7,
+#main_mv_face_girl_12,
+#main_mv_face_girl_13,
+#main_mv_face_boy_12,
+#main_mv_face_boy_13 {
+    width: 88px;
+    position: absolute;
+    right: -21px;
+    bottom: -89px;
+}
+
+#main_mv_eye_boy_1,
+#main_mv_eye_boy_2,
+#main_mv_eye_boy_3,
+#main_mv_eye_boy_4,
+#main_mv_eye_boy_5,
+#main_mv_eye_boy_6,
+#main_mv_eye_boy_7,
+#main_mv_eye_boy_8,
+#main_mv_eye_boy_10,
+#main_mv_eye_boy_11,
+#main_mv_eye_boy_12,
+#main_mv_eye_boy_13,
+#main_mv_eye_boy_14 {
+    right: -12px;
+    top: 16px;
+    position: absolute;
+    width: 53px;
+}
+
+#main_mv_eye_boy_9 {
+    right: -12px;
+    top: 27px;
+    position: absolute;
+    width: 53px
+}
+
+#main_mv_eye_girl_1,
+#main_mv_eye_girl_2,
+#main_mv_eye_girl_3,
+#main_mv_eye_girl_4,
+#main_mv_eye_girl_5,
+#main_mv_eye_girl_6,
+#main_mv_eye_girl_7,
+#main_mv_eye_girl_9,
+#main_mv_eye_girl_10,
+#main_mv_eye_girl_12,
+#main_mv_eye_girl_13,
+#main_mv_eye_girl_14 {
+    right: -5px;
+    top: 16px;
+    position: absolute;
+    width: 53px;
+}
+
+#main_mv_eye_girl_10 {
+    right: -5px;
+    top: 60px;
+    position: absolute;
+    width: 53px;
+}
+
+#main_mv_eye_girl_8 {
+    right: -5px;
+    top: 21px;
+    position: absolute;
+    width: 53px;
+}
+
+#main_mv_eye_girl_9 {
+    right: -5px;
+    top: 59px;
+    position: absolute;
+    width: 53px;
+}
+
+#main_mv_mouth_boy_3,
+#main_mv_mouth_boy_4,
+#main_mv_mouth_boy_6,
+#main_mv_mouth_boy_7,
+#main_mv_mouth_boy_9,
+#main_mv_mouth_boy_13,
+#main_mv_mouth_boy_14 {
+    position: absolute;
+    width: 17px;
+    left: -15px;
+    top: 48px;
+}
+
+#main_mv_mouth_girl_3,
+#main_mv_mouth_girl_4,
+#main_mv_mouth_girl_6,
+#main_mv_mouth_girl_7,
+#main_mv_mouth_girl_13,
+#main_mv_mouth_girl_14 {
+    position: absolute;
+    width: 14px;
+    left: -19px;
+    top: 44px;
+}
+
+#main_mv_mouth_boy_2,
+#main_mv_mouth_girl_2,
+#main_mv_mouth_boy_12 {
+    position: absolute;
+    width: 26px;
+    left: -20px;
+    top: 47px;
+}
+
+#main_mv_mouth_girl_12 {
+    position: absolute;
+    width: 6px;
+    left: -20px;
+    top: 47px;
+}
+
+#main_mv_mouth_boy_5,
+#main_mv_mouth_boy_1,
+#main_mv_mouth_boy_11,
+#main_mv_mouth_boy_8,
+#main_mv_mouth_girl_5,
+#main_mv_mouth_girl_1,
+#main_mv_mouth_girl_11,
+#main_mv_mouth_girl_8 {
+    position: absolute;
+    width: 17px;
+    left: -15px;
+    top: 42px;
+}
+
+#main_mv_mouth_girl_9 {
+    position: absolute;
+    width: 14px;
+    left: -19px;
+    top: 100px;
+}
+
+#main_mv_mouth_boy_10 {
+    position: absolute;
+    width: 32px;
+    left: -26px;
+    top: 41px;
+}
+
+#main_mv_mouth_girl_10 {
+    position: absolute;
+    width: 8px;
+    left: -20px;
+    top: 99px;
+}
+
+#main_mv_nose_boy_1,
+#main_mv_nose_boy_2,
+#main_mv_nose_boy_6,
+#main_mv_nose_boy_8,
+#main_mv_nose_boy_9,
+#main_mv_nose_boy_11,
+#main_mv_nose_boy_12,
+#main_mv_nose_girl_1,
+#main_mv_nose_girl_2,
+#main_mv_nose_girl_6,
+#main_mv_nose_girl_8,
+#main_mv_nose_girl_9,
+#main_mv_nose_girl_11,
+#main_mv_nose_girl_12 {
+    position: absolute;
+    width: 4px;
+    left: -15px;
+    top: 42px;
+}
+
+#main_mv_nose_boy_3 {
+    position: absolute;
+    width: 5px;
+    left: -15px;
+    top: 39px;
+}
+
+#main_mv_nose_girl_3 {
+    position: absolute;
+    width: 5px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_boy_4 {
+    position: absolute;
+    width: 17px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_girl_4 {
+    position: absolute;
+    width: 7px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_boy_13 {
+    position: absolute;
+    width: 5px;
+    left: -15px;
+    top: 39px;
+}
+
+#main_mv_nose_girl_13 {
+    position: absolute;
+    width: 5px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_boy_14 {
+    position: absolute;
+    width: 17px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_girl_14 {
+    position: absolute;
+    width: 7px;
+    left: -15px;
+    top: 44px;
+}
+
+#main_mv_nose_boy_5,
+#main_mv_nose_girl_5 {
+    position: absolute;
+    width: 8px;
+    left: -15px;
+    top: 42px;
+}
+
+#main_mv_nose_boy_7 {
+    position: absolute;
+    width: 15px;
+    left: -15px;
+    top: 42px;
+}
+
+#main_mv_nose_girl_7 {
+    position: absolute;
+    width: 23px;
+    left: -22px;
+    top: 42px;
+}
+
+#main_mv_nose_girl_8 {
+    position: absolute;
+    width: 8px;
+    left: -15px;
+    top: 37px;
+}
+
+#main_mv_nose_boy_10 {
+    position: absolute;
+    width: 15px;
+    left: -23px;
+    top: 42px;
+}
+
+#main_mv_nose_girl_10 {
+    position: absolute;
+    width: 44px;
+    left: -23px;
+    top: 42px;
+}
+
+#main_mv_nose_girl_10 {
+    position: absolute;
+    width: 18px;
+    left: -23px;
+    top: 86px;
+}
+
+.main_mv_img {
     position: relative;
+}
+
+.main_mv_img>div {
+    position: relative;
+}
+
+.main_mv_img>img {
+    z-index: -1000;
+}
+
+.main_mv_img_hair {
+    z-index: 2000;
+}
+
+.main_mv_img_face {
+    z-index: 1500;
+}
+
+.main_mv_img_eye {
+    z-index: 2000;
+}
+
+.main_mv_img_nose {
+    z-index: 2000;
+}
+
+.main_mv_img_mouth {
+    z-index: 2000;
+}
+
+.main_mv_img_cloth {
+    z-index: 1300;
 }
 
 .main_mv_img_hair>div {
     position: absolute;
     width: 40px;
-    left: 136px;
-    top: 5px;
+    left: 144px;
+    top: 11px;
 }
 
 .main_mv_img_face>div {
     position: absolute;
-    width: 40px;
-    left: 136px;
-    top: 5px;
+    width: 44px;
+    left: 140px;
+    top: 15px;
 }
 
 .main_mv_img_eye>div {
     position: absolute;
-    width: 40px;
-    left: 136px;
-    top: 5px;
+    width: 28px;
+    left: 147px;
+    top: 22px;
 }
 
 .main_mv_img_nose>div {
     position: absolute;
-    width: 40px;
-    left: 136px;
-    top: 5px;
+    width: 5px;
+    left: 155px;
+    top: 29px;
 }
 
 .main_mv_img_mouth>div {
     position: absolute;
-    width: 40px;
-    left: 136px;
-    top: 5px;
+    width: 8px;
+    left: 153px;
+    top: 37px;
 }
 
-.main_mv_option {
-    flex-basis: 14.28%;
+.choose,
+.message {
+    margin-top: 20px;
 }
 
-.main_mv_option img {
-    width: 100%;
-}
 
-.character_mv_options {
-    position: relative;
-}
+/* キャラクーのパーツ選択 */
 
-.character_mv_options>div {
-    width: 100%;
+.character_mv_options_hair,
+.character_mv_options_face,
+.character_mv_options_nose,
+.character_mv_options_eye,
+.character_mv_options_mouth {
+    position: relative !important;
+    border: 2px solid black;
+    margin-bottom: 6px;
     flex-wrap: wrap;
-    position: absolute;
     top: 0;
 }
 
-.character_mv_options_hair {
-    position: relative !important;
+.option1 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.option2 {
+    border-bottom: 1px solid black;
+}
+
+.option3 {
+    border-right: 1px solid black;
 }
 
 .character_mv_option {
-    flex-basis: 14.28%;
+    flex-basis: 14%;
+    background-color: skyblue;
+    height: 45px;
+    display: flex;
+    align-items: center;
 }
 
 .character_mv_option img {
     width: 100%;
+    height: 100%;
 }
+
+
+/* 洋服 */
 
 .cloth_mv_tit {
     text-align: left;
@@ -101,26 +1008,37 @@ body>div {
 
 .main_mv_img_cloth {
     position: relative;
+    z-index: 1300;
 }
 
 .main_mv_img_cloth>div {
     position: absolute;
-    width: 70px;
-    left: 136px;
-    top: 49px;
+    width: 99px;
+    left: 117px;
+    top: 82px;
+    z-index: 0;
+}
+
+.main_mv_img_cloth>div img {
+    width: 100%;
 }
 
 .main_mv_option img {
     width: 100%;
+    height: 100%;
 }
 
 .cloth_mv_options {
-    width: 100%;
     flex-wrap: wrap;
+    border: 2px solid black;
 }
 
 .cloth_mv_option {
-    flex-basis: 14.28%;
+    flex-basis: 14%;
+    background-color: skyblue;
+    height: 45px;
+    display: flex;
+    align-items: center;
 }
 
 .cloth_mv_option img {
@@ -130,4 +1048,180 @@ body>div {
 .cloth_mv textarea {
     width: 100%;
     height: 30px;
+}
+
+.area {
+    border: 2px solid black;
+    margin-bottom: 12px;
+    width: 355px !important;
+}
+
+#show_6 {
+    border: none;
+    padding: 7px 25px 0 25px;
+    background: black;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* ラストぺージ */
+
+.last-page {
+    border: 2px solid black;
+    padding: 40px;
+    width: 213px;
+    margin: 30px auto;
+}
+
+.last-text {
+    font-size: 40px;
+}
+
+.last-image {
+    display: flex;
+    width: 170px;
+    margin: 9px auto;
+}
+
+
+/* レスポンシブ */
+
+.main_mv_img_hair,
+.main_mv_img_face,
+.main_mv_img_eye,
+.main_mv_img_nose,
+.main_mv_img_mouth,
+.main_mv_img_cloth {
+    margin-left: 1.14rem !important;
+}
+
+#howTo_page3 {
+    height: 350px;
+    width: 320px;
+}
+
+.check-bottom {
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 30px 45px;
+}
+
+.finish-button {
+    margin-top: 20px !important;
+}
+
+
+/* 376px */
+
+@media screen and (max-width: 376px) {
+    .main_mv_img_hair,
+    .main_mv_img_face,
+    .main_mv_img_eye,
+    .main_mv_img_nose,
+    .main_mv_img_mouth,
+    .main_mv_img_cloth {
+        margin-left: 0 !important;
+        margin-right: 1.65rem !important;
+    }
+    .page2-method,
+    .page2-explanation {
+        font-size: 30px;
+    }
+    #page_6 {
+        height: 420px !important;
+        width: 300px !important;
+    }
+    .check-bottom {
+        margin: 0 0 30px 20px !important;
+    }
+    .like {
+        font-size: 25px !important;
+    }
+    .area {
+        width: 315px !important;
+    }
+    .ok {
+        margin-left: 10px;
+    }
+    .delet {
+        font-size: 17px !important;
+    }
+    #boy,
+    #girl {
+        font-size: 15px !important;
+    }
+}
+
+
+/* 321px */
+
+@media screen and (max-width: 321px) {
+    .character_mv_option {
+        flex-basis: 13.95%;
+        background-color: skyblue;
+    }
+    .cloth_mv_option {
+        flex-basis: 13.95%;
+        background-color: skyblue;
+    }
+    .main_mv_img_hair,
+    .main_mv_img_face,
+    .main_mv_img_eye,
+    .main_mv_img_nose,
+    .main_mv_img_mouth,
+    .main_mv_img_cloth {
+        margin-left: -29px !important;
+    }
+    #page_6 {
+        height: 400px !important;
+    }
+    .check-bottom {
+        margin: 0 0 30px 20px !important;
+    }
+    .like {
+        font-size: 18px !important;
+    }
+    .area {
+        width: 260px !important;
+        padding: 0;
+    }
+    #boy,
+    #girl {
+        font-size: 11px !important;
+    }
+    .last-page {
+        padding: 30px;
+        width: 180px;
+        margin: 20px auto;
+    }
+    #headTo_2,
+    #headTo_3,
+    #headTo_4,
+    #show_6,
+    #headTo_5from_end {
+        font-size: 20px;
+        padding-top: 0;
+    }
+    .chara,
+    .chara1 {
+        font-size: 13px !important;
+    }
+    #boy,
+    #girl {
+        margin-top: 20px;
+    }
+    .main_mv_img {
+        margin-top: 20px !important;
+        height: 180px !important
+    }
+    .page2-method,
+    .page2-explanation {
+        font-size: 30px;
+    }
+    #howTo_page3 {
+        height: 310px;
+        width: 280px;
+    }
 }
